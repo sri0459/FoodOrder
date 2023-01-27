@@ -1,0 +1,20 @@
+<header>
+    <div class="container">
+        <a routerLink="/home" class="logo">Food Corner</a>
+        <div class="form-group">
+            <input type="text" class="form-control"  [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search Items">
+        </div>
+        <span class=" fas fa-search search-icon"></span>
+        <!-- <nav>
+            <ul>
+                <li>
+                  <a routerLink="/cart">Cart</a>  
+                </li>
+            </ul>
+        </nav> -->
+        <button routerLink="/cart" class="btn btn-primary">
+            <i class="bi bi-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+    </div>
+</header>

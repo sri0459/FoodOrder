@@ -1,0 +1,40 @@
+<div class="content" role="main">
+    <div class="row">
+        <ng-container *ngFor="let item of datalist">
+            <div class="card col-md-3" >
+                <img class="img-responsive img-thumbnail imgclass" src="{{item.image}}" >
+                
+                   <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;max-width: 100 ch;">{{item.name}}</h5>
+                     <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;max-width: 100 ch;">{{item.description}}</p>
+                    <p ><strong>Price :</strong>$ {{item.price}}</p>
+                    <button class="btn btn-primary" (click)="addtoCart(item)">Add to Cart</button>
+            </div>
+        
+        </ng-container>
+        
+    </div>
+
+
+</div>
+
+
+
+<!-- <ul>
+    <li *ngFor="let item of datalist | filter:searchKey:'title'" >
+        <a routerLink="/item/{{item.id}}">
+            <img  src="{{item.image}}"  alt="">
+            <div class="content">
+                <div class="name">
+                    {{item.name}}
+                </div>
+                <div class="price">
+                    <span>
+                        {{item.price | currency}}
+                    </span>
+                </div>
+            </div>
+            <button class="btn btn-primary"> add to cart</button>
+        </a>
+
+    </li>
+</ul> -->
